@@ -1,6 +1,6 @@
 import { createElement } from "../create/createElement.js";
 import { getData } from "../server/getData.js";
-import { state, updateSearch } from "../server/globalVarieble.js";
+import { state, stateKey } from "../server/globalVarieble.js";
 import { createPictures } from "../server/pictures.js";
 import { sideBar } from "./settingsBar.js";
 
@@ -29,8 +29,8 @@ export function createHeader(data, mainContainer, url) {
       callbackFn: async (event) => {
         event.preventDefault();
         state.search = search.value;
-        console.log(mainContainer);
-        url = `https://api.unsplash.com/search/photos?query=${state.search}&per_page=30&orientation=landscape&client_id=kDtwf0XCWb5yvNQOIqPhVrgf2hmSYIC6j3o3z2rrPS8`;
+        localStorage.setItem(stateKey, JSON.stringify(state));
+        url = `https://api.unsplash.com/search/photos?query=${state.search}&per_page=30&orientation=landscape&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo`;
         data = await getData(url);
         createPictures(data, mainContainer);
       },
