@@ -19,14 +19,39 @@ body {
   row-gap: 10px;
   margin: 10px auto;
 }
+.picture-container {
+  height: 214px;
+  overflow: hidden;
+}
 .picture {
   width: 380px;
   height: 214px;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
+}
+.bottom-bar {
+  height: 50px;
+  transition: 1s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.download-button {
+  border-radius: 10px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: url("../assets/download.svg") center;
+  background-color: var(--isabelline);
+  background-size: cover;
 }
 @media screen and (max-width: 816px) {
   .picture {
+    width: 100%;
+  }
+  .picture-container {
     width: 100%;
   }
 }
