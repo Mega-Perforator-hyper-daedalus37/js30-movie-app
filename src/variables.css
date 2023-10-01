@@ -1,0 +1,31 @@
+:root {
+  --taupe: #463f3a;
+  --battleship-gray: #8a817c;
+  --silver: #bcb8b1;
+  --isabelline: #f4f3ee;
+  --melon: #e0afa0;
+
+  --baby-powder: #fffffa;
+  --davys-gray: #515052;
+  --black: #171717;
+  --jet: #333138;
+  --vermilion: #ff312e;
+}
+::placeholder {
+  color: var(--davys-gray);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --baby-powder: #171717;
+    --davys-gray: #8a817c;
+    --black: #fffffa;
+    --jet: #bcb8b1;
+    --vermilion: #e0afa0;
+  }
+  .search-box .search {
+    background-color: #f4f3ee;
+  }
+  .search-box .settings {
+    filter: invert(100%) sepia(0%) saturate(0%) brightness(18%) contrast(100%);
+  }
+}
