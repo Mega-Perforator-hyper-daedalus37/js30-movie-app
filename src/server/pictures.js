@@ -40,7 +40,7 @@ export const createPictures = (data, mainContainer) => {
       attribute: [
         {
           attribute: "href",
-          value: data.results[index].links.download,
+          value: data.results[index].urls.full,
         },
         {
           attribute: "download",

@@ -30,7 +30,7 @@ export function createHeader(data, mainContainer, url) {
         event.preventDefault();
         state.search = search.value;
         localStorage.setItem(stateKey, JSON.stringify(state));
-        url = `https://api.unsplash.com/search/photos?query=${state.search}&per_page=30&orientation=landscape&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo`;
+        url = `https://api.unsplash.com/search/photos?query=${state.search}&per_page=30&orientation=landscape&client_id=kDtwf0XCWb5yvNQOIqPhVrgf2hmSYIC6j3o3z2rrPS8`;
         data = await getData(url);
         createPictures(data, mainContainer);
       },
